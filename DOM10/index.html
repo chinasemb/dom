@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id = "btn" name = "" value = "点击添加">
+	<ul id = "ul">
+		
+	</ul>
+	<script>
+		/*字符串的拼接操作*/
+		// var btn = document.getElementById("btn");
+		// var ul = document.getElementById("ul");
+
+		// var html = "";
+		// var num  = 0 ;
+		// btn.onclick = function(){
+		// 	num++;
+		// 	html+="<li>"+num+"</li>";
+
+		// 	ul.innerHTML = html;
+		// } 
+		/*字符串的拼接操作*/
+		var btn = document.getElementById("btn");
+		var ul = document.getElementById("ul");
+
+		var html = "";
+		var num  = 0 ;
+		btn.onclick = function(){
+			num++;
+			var li = document.createElement("li");
+
+			li.innerHTML = num;
+
+			ul.appendChild(li); 
+		} 
+
+	</script>
+</body>
+</html>
