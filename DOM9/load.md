@@ -1,0 +1,57 @@
+
+
+![这里写图片描述](http://img.blog.csdn.net/20171120200129279?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvS2FzZWthbGU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](http://img.blog.csdn.net/20171120200145965?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvS2FzZWthbGU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+![这里写图片描述](http://img.blog.csdn.net/20171120200756339?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvS2FzZWthbGU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+```
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{width: 200px;height: 200px;background-color: pink;border:10px solid #00BFFF; padding:5px; margin:10px;position :absolute;}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		
+	</div>
+	<script>
+		/*	获取某个元素的宽高
+				elem.clientWidth/elem.clientHeight
+				注意:不计算边框.    计算padding 不计算 margin
+			获取某个元素的宽高
+				elem.offsetWidth/elem.offsetHeight
+				注意:计算边框.		计算padding 不计算 margin
+		*/
+		var div = document.getElementById("div1");
+		console.log(div.clientWidth);
+		console.log(div.offsetWidth);
+		/*document可视区的宽高
+			document.documentElement.clientWidth
+			document.documentElement.clientHeight
+		*/
+		console.log(document.documentElement.clientWidth);
+		console.log(document.documentElement.clientHeight);
+		/*实例: 登录框
+		让一个不确定宽高的元素居中显示
+		元素的 left = (可视区域宽度-元素宽度)/2
+		元素的 top  = (可视区域高度-元素高度)/2
+		*/
+		var clientW = document.documentElement.clientWidth;
+		var iW      = div.offsetWidth;
+
+		var clientH = document.documentElement.clientHeight;
+		var iH      = div.offsetHeight;
+
+		div.style.left  = (clientW - iW)/2 + "px";
+		div.style.top   = (clientH - iH)/2 + "px";
+
+	</script>
+</body>
+</html>
+```
+
